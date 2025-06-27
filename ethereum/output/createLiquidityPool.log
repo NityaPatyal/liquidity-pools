@@ -1,0 +1,421 @@
+---------
+🚀 ~ poolAddress: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+poolAddress === ethers.constants.AddressZero:  false
+✅ Pool already exists: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🧪 slot0: [
+  BigNumber { _hex: '0x00', _isBigNumber: true },
+  0,
+  0,
+  0,
+  0,
+  0,
+  false,
+  sqrtPriceX96: BigNumber { _hex: '0x00', _isBigNumber: true },
+  tick: 0,
+  observationIndex: 0,
+  observationCardinality: 0,
+  observationCardinalityNext: 0,
+  feeProtocol: 0,
+  unlocked: false
+]
+⚠️ Pool not initialized. Initializing now...
+💡 sqrtPriceX96 to initialize: 2505414483750479227146068685
+✅ Pool initialized in tx: 0x23c04f660f71e550f0971c3958375302d4699db4a65bdfbd00ff23f3aacae1dc
+---------
+[dotenv@16.6.0] injecting env (2) from .env
+🚀 ~ address: 0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706
+🚀 ~ balanceA: BigNumber { _hex: '0xd3c21bcecceda1000000', _isBigNumber: true }
+🚀 ~ balanceB: BigNumber { _hex: '0x018a915601fee764ae', _isBigNumber: true }
+47: 
+🚀 ~ recepit1.hash for approval for Token A: 0xa6ee045733bef5995529bfa889f511d370e343d8f2dec8f742585943a0c1280b
+🚀 ~ receipt2.hash for approval for Token B: 0xa71f57e81f02eb8fda35771d862a008e315407bf747415e71f1246275c29ad69
+54: 
+🚀 ~ token0, token1: 0x779877a7b0d9e8603169ddbd7836e478b4624789 0xe7593c95763E75165d6B3e8477470169a5fe4d7a
+🚀 ~ poolAddress: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+poolAddress === ethers.constants.AddressZero:  false
+✅ Pool already exists: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🧪 slot0: [
+  BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  -69082,
+  0,
+  1,
+  1,
+  0,
+  true,
+  sqrtPriceX96: BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  tick: -69082,
+  observationIndex: 0,
+  observationCardinality: 1,
+  observationCardinalityNext: 1,
+  feeProtocol: 0,
+  unlocked: true
+]
+✅ Pool already initialized. sqrtPriceX96: 2505414483750479227146068685
+🚀 ~ mintParams: {
+  token0: '0x779877a7b0d9e8603169ddbd7836e478b4624789',
+  token1: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+  fee: 3000,
+  tickLower: -887220,
+  tickUpper: 887220,
+  amount0Desired: BigNumber { _hex: '0x2386f26fc10000', _isBigNumber: true },
+  amount1Desired: BigNumber { _hex: '0x8ac7230489e80000', _isBigNumber: true },
+  amount0Min: 0,
+  amount1Min: 0,
+  recipient: '0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706',
+  deadline: 1751006079
+}
+Mint done. Tx hash: 0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089
+✅ liquidity added at: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🚀 ~ :113 ~ logs: [
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000002386f26fc0ffe3',
+    logIndex: 15,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  },
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52'
+    ],
+    data: '0x0000000000000000000000000000000000000000000000018a6dcf0f8f2664cb',
+    logIndex: 16,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  },
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 17,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  },
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8',
+    topics: [
+      '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52',
+      '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2764c',
+      '0x00000000000000000000000000000000000000000000000000000000000d89b4'
+    ],
+    data: '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda5200000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 18,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  },
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x0000000000000000000000000000000000000000000000000000000000000000',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000000000000000000000000000000000000000030bad'
+    ],
+    data: '0x',
+    logIndex: 19,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  },
+  {
+    transactionIndex: 63,
+    blockNumber: 8638379,
+    transactionHash: '0xc6038831b966333002ae0c9cb1aabb02791def886539274ea7456c45c28af089',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0x3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f',
+      '0x0000000000000000000000000000000000000000000000000000000000030bad'
+    ],
+    data: '0x00000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 20,
+    blockHash: '0xcb6edf2f65bf2f3c12c2d566574c320109c19a5a3f72da5fbd0f2bdd9d5e634a'
+  }
+]
+Pool: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+--------
+[dotenv@16.6.0] injecting env (2) from .env
+🚀 ~ address: 0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706
+🚀 ~ balanceA: BigNumber { _hex: '0xd3c21bcec3d5528d6000', _isBigNumber: true }
+🚀 ~ balanceB: BigNumber { _hex: '0x018a6dcf0f8f2664cb', _isBigNumber: true }
+47: 
+🚀 ~ recepit1.hash for approval for Token A: 0x00e0b73c92c483d8274b9cd880e7a6ca3d4344b8c721b1a4622718102d75c5cc
+🚀 ~ receipt2.hash for approval for Token B: 0x568946ce146a26b16be23332812b42bbad3a24a84d17accedafb54363c2e3f71
+54: 
+🚀 ~ token0, token1: 0x779877a7b0d9e8603169ddbd7836e478b4624789 0xe7593c95763E75165d6B3e8477470169a5fe4d7a
+🚀 ~ poolAddress: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+poolAddress === ethers.constants.AddressZero:  false
+✅ Pool already exists: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🧪 slot0: [
+  BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  -69082,
+  0,
+  1,
+  1,
+  0,
+  true,
+  sqrtPriceX96: BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  tick: -69082,
+  observationIndex: 0,
+  observationCardinality: 1,
+  observationCardinalityNext: 1,
+  feeProtocol: 0,
+  unlocked: true
+]
+✅ Pool already initialized. sqrtPriceX96: 2505414483750479227146068685
+🚀 ~ mintParams: {
+  token0: '0x779877a7b0d9e8603169ddbd7836e478b4624789',
+  token1: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+  fee: 3000,
+  tickLower: -887220,
+  tickUpper: 887220,
+  amount0Desired: BigNumber { _hex: '0x2386f26fc10000', _isBigNumber: true },
+  amount1Desired: BigNumber { _hex: '0x8ac7230489e80000', _isBigNumber: true },
+  amount0Min: 0,
+  amount1Min: 0,
+  recipient: '0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706',
+  deadline: 1751007050
+}
+Mint done. Tx hash: 0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b
+✅ liquidity added at: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🚀 ~ :113 ~ logs: [
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000002386f26fc0ffe3',
+    logIndex: 8,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  },
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52'
+    ],
+    data: '0x0000000000000000000000000000000000000000000000018a4a481d1f6564e8',
+    logIndex: 9,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  },
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 10,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  },
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8',
+    topics: [
+      '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52',
+      '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2764c',
+      '0x00000000000000000000000000000000000000000000000000000000000d89b4'
+    ],
+    data: '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda5200000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 11,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  },
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x0000000000000000000000000000000000000000000000000000000000000000',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000000000000000000000000000000000000000030bae'
+    ],
+    data: '0x',
+    logIndex: 12,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  },
+  {
+    transactionIndex: 24,
+    blockNumber: 8638460,
+    transactionHash: '0xdc79fcf5b718abad981d82eb501118cdb4986ab4f102c8089081f464a2ff1e0b',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0x3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f',
+      '0x0000000000000000000000000000000000000000000000000000000000030bae'
+    ],
+    data: '0x00000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 13,
+    blockHash: '0xd7ab93c39a5cc2ae06d71e456250bc9d467158a6e870dd19664acb869342060b'
+  }
+]
+Pool: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+[dotenv@16.6.0] injecting env (2) from .env
+🚀 ~ address: 0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706
+🚀 ~ balanceA: BigNumber { _hex: '0xd3c21bcebabd041ac000', _isBigNumber: true }
+🚀 ~ balanceB: BigNumber { _hex: '0x018a4a481d1f6564e8', _isBigNumber: true }
+47: 
+🚀 ~ recepit1.hash for approval for Token A: 0xf98b8c8eb4a8d8d1fafd9576ec106e95971b488d96681f0d9dfecd1c252a5441
+🚀 ~ receipt2.hash for approval for Token B: 0x698b3c73932140ce7d824798cf986c221d59ef41838e3e851d0ce3ab23b90a23
+54: 
+🚀 ~ token0, token1: 0x779877a7b0d9e8603169ddbd7836e478b4624789 0xe7593c95763E75165d6B3e8477470169a5fe4d7a
+🚀 ~ poolAddress: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+poolAddress === ethers.constants.AddressZero:  false
+✅ Pool already exists: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🧪 slot0: [
+  BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  -69082,
+  0,
+  1,
+  1,
+  0,
+  true,
+  sqrtPriceX96: BigNumber { _hex: '0x08186e27501d3910c2c5e2cd', _isBigNumber: true },
+  tick: -69082,
+  observationIndex: 0,
+  observationCardinality: 1,
+  observationCardinalityNext: 1,
+  feeProtocol: 0,
+  unlocked: true
+]
+✅ Pool already initialized. sqrtPriceX96: 2505414483750479227146068685
+🚀 ~ mintParams: {
+  token0: '0x779877a7b0d9e8603169ddbd7836e478b4624789',
+  token1: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+  fee: 3000,
+  tickLower: -887220,
+  tickUpper: 887220,
+  amount0Desired: BigNumber { _hex: '0x2386f26fc10000', _isBigNumber: true },
+  amount1Desired: BigNumber { _hex: '0x8ac7230489e80000', _isBigNumber: true },
+  amount0Min: 0,
+  amount1Min: 0,
+  recipient: '0xaDC7EBd185AfD30519f68aA5c5a3ab4Ea0Eb5706',
+  deadline: 1751007951
+}
+Mint done. Tx hash: 0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1
+✅ liquidity added at: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
+🚀 ~ :113 ~ logs: [
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000002386f26fc0ffe3',
+    logIndex: 40,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  },
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0x779877A7B0D9E8603169DdbD7836e478b4624789',
+    topics: [
+      '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52'
+    ],
+    data: '0x0000000000000000000000000000000000000000000000018a26c12aafa46505',
+    logIndex: 41,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  },
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0xe7593c95763E75165d6B3e8477470169a5fe4d7a',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000006fa737b7ceac46c57297198624a1de1f5b29f2e8'
+    ],
+    data: '0x000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 42,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  },
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8',
+    topics: [
+      '0x7a53080ba414158be7ec69b987b5fb7d07dee101fe85488f0853ae16239d0bde',
+      '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda52',
+      '0xfffffffffffffffffffffffffffffffffffffffffffffffffffffffffff2764c',
+      '0x00000000000000000000000000000000000000000000000000000000000d89b4'
+    ],
+    data: '0x0000000000000000000000001238536071e1c677a632429e3655c799b22cda5200000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 43,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  },
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef',
+      '0x0000000000000000000000000000000000000000000000000000000000000000',
+      '0x000000000000000000000000adc7ebd185afd30519f68aa5c5a3ab4ea0eb5706',
+      '0x0000000000000000000000000000000000000000000000000000000000030baf'
+    ],
+    data: '0x',
+    logIndex: 44,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  },
+  {
+    transactionIndex: 28,
+    blockNumber: 8638535,
+    transactionHash: '0xc0e21d4c2d265e9ba744a1721f9e18236d6ab26eda9941075cf3cb5b16f644a1',
+    address: '0x1238536071E1c677A632429e3655c799b22cDA52',
+    topics: [
+      '0x3067048beee31b25b2f1681f88dac838c8bba36af25bfb2b7cf7473a5847e35f',
+      '0x0000000000000000000000000000000000000000000000000000000000030baf'
+    ],
+    data: '0x00000000000000000000000000000000000000000000000000011f9b83a95b45000000000000000000000000000000000000000000000000002386f26fc0ffe3000000000000000000000000000000000000000000000000000009184e72a000',
+    logIndex: 45,
+    blockHash: '0xd154fb21c14d367e04cf6027a109e9aaeea8220db1f09045ef03b27cd644e441'
+  }
+]
+Pool: 0x6fA737B7ceac46C57297198624a1dE1f5B29F2E8
