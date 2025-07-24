@@ -10,24 +10,25 @@ async function test() {
   const wallet = ethers.Wallet.fromMnemonic(mnemonic).connect(provider);
 
   // Tokens on Sepolia
-  const SHT = "0xe7593c95763E75165d6B3e8477470169a5fe4d7a";
-  const USDC = "0x94a9d9ac8a22534e3faca9f4e7f2e2cf85d5e4c8";
+  // const USDC = "0x94a9d9ac8a22534e3faca9f4e7f2e2cf85d5e4c8";
+  const USDC = "0xebcc972b6b3eb15c0592be1871838963d0b94278";
   const LINK = "0x779877a7b0d9e8603169ddbd7836e478b4624789";
+  const USDT = "0xaa8e23fb1079ea71e0a56f48a2aa51851d8433d0";
 
   // Test with small amounts
   const amountUSDC = ethers.utils.parseUnits("10", 6); // 10 USDC
-  const amountSHT = ethers.utils.parseUnits("10", 18); // 10 SHT
-  console.log("🚀 ~ test ~ amountSHT:", amountSHT)
+  console.log("🚀 ~ :18 ~ test ~ amountUSDC:", amountUSDC)
 
   const amountLINK = ethers.utils.parseEther("0.01"); // 0.01 ETH
   console.log("🚀 ~ :21 ~ test ~ amountLINK:", amountLINK)
-
+  const amountUSDT = ethers.utils.parseUnits("10", 6); // 10 USDT
+ 
   await addLiquidity(
     USDC,
-    LINK,
+    USDT,
     wallet,
     amountUSDC,
-    amountLINK
+    amountUSDT
   );
 
 }

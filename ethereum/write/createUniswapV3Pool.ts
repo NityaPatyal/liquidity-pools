@@ -3,6 +3,7 @@ import { abi as ERC20_ABI } from "@uniswap/v3-core/artifacts/contracts/interface
 import { abi as FACTORY_ABI } from "@uniswap/v3-core/artifacts/contracts/UniswapV3Factory.sol/UniswapV3Factory.json";
 import { abi as POSITION_MANAGER_ABI } from "@uniswap/v3-periphery/artifacts/contracts/NonfungiblePositionManager.sol/NonfungiblePositionManager.json";
 import JSBI from "jsbi";
+import { encodePriceSqrt, getTickRange } from "../utils/utils";
 
 // Constants
 // SEPOLIA V3 UNISWAP Factory Contract
@@ -14,21 +15,23 @@ const POSITION_MANAGER = "0x1238536071E1c677A632429e3655c799b22cDA52";
 
 const FEE_TIER = 3000; // 0.3%
 
-// Helper to get sqrtPriceX96
-const encodePriceSqrt = (reserve1: number, reserve0: number): string => {
-  const ratio = JSBI.divide(
-    JSBI.BigInt(Math.floor(Math.sqrt(reserve1 / reserve0) * 2 ** 96 * 1e6)),
-    JSBI.BigInt(1e6)
-  );
-  return ratio.toString();
-};
+// // Helper to get sqrtPriceX96
+// const encodePriceSqrt = (reserve1: number, reserve0: number): string => {
+//   const ratio = JSBI.divide(
+//     JSBI.BigInt(Math.floor(Math.sqrt(reserve1 / reserve0) * 2 ** 96 * 1e6)),
+//     JSBI.BigInt(1e6)
+//   );
+//   return ratio.toString();
+// };
 
 export async function createUniswapV3Pool(
   tokenA: string,
   tokenB: string,
   signer: ethers.Signer,
   amountA: ethers.BigNumber,
-  amountB: ethers.BigNumber
+  amountB: ethers.BigNumber,
+  decimal0: number,
+  decimal1:number,
 ) {
   const address = await signer.getAddress();
   console.log("🚀 ~ address:", address);
@@ -78,6 +81,15 @@ export async function createUniswapV3Pool(
 
   console.log("🚀 ~ token0, token1:", token0, token1);
 
+  // Use amounts for correct tokens
+  const amount0 = token0 === tokenA ? amountA : amountB;
+  const amount1 = token1 === tokenB ? amountB : amountA;
+
+  // Use reserves to get real-world price// Use decimal prices
+  const reserve0 = parseFloat(ethers.utils.formatUnits(amount0, decimal0) as string);
+  const reserve1 = parseFloat(ethers.utils.formatUnits(amount1, decimal1) as string);
+
+
   let poolAddress = await factory.getPool(token0, token1, FEE_TIER);
   console.log("🚀 ~ poolAddress:", poolAddress);
 
@@ -115,10 +127,6 @@ export async function createUniswapV3Pool(
     if (!isInitialized) {
       console.log("⚠️ Pool not initialized. Initializing now...");
 
-      // Convert BigNumber to number for JS math (approximate, use string if high precision needed)
-      const reserve0 = parseFloat(ethers.utils.formatUnits(amountA, 18));
-      const reserve1 = parseFloat(ethers.utils.formatUnits(amountB, 18));
-
       const sqrtPriceX96 = encodePriceSqrt(reserve1, reserve0); // Adjust ratio if needed
       console.log("💡 sqrtPriceX96 to initialize:", sqrtPriceX96);
 
@@ -142,16 +150,35 @@ export async function createUniswapV3Pool(
     POSITION_MANAGER_ABI,
     signer
   );
+
+  // Initial price: token1 per token0
+  const midPrice = reserve1 / reserve0;
+  console.log("🚀 ~ :156 ~ midPrice:", midPrice)
+
+
+  // Now define your price range (±5% around midPrice for example)
+  const priceLower = midPrice * 0.95;
+  console.log("🚀 ~ :161 ~ priceLower:", priceLower)
+
+  const priceUpper = midPrice * 1.05;
+  console.log("🚀 ~ :164 ~ priceUpper:", priceUpper)
+
+
   const deadline = Math.floor(Date.now() / 1000) + 60 * 10;
+  console.log("🚀 ~ :147 ~ deadline:", deadline)
+
+  const { tickLower, tickUpper } = getTickRange(priceLower, priceUpper, FEE_TIER); // example
+  console.log("🚀 ~ :148 ~ tickLower:", tickLower)
+  console.log("🚀 ~ :149 ~ tickUpper:", tickUpper)
 
   const mintParams = {
     token0: token0,
     token1: token1,
     fee: FEE_TIER,
-    tickLower: -887220,
-    tickUpper: 887220,
-    amount0Desired: tokenA < tokenB ? amountA : amountB,
-    amount1Desired: tokenA > tokenB ? amountA : amountB,
+    tickLower: tickLower,
+    tickUpper: tickUpper,
+    amount0Desired: amount0,
+    amount1Desired: amount1,
     amount0Min: 0,
     amount1Min: 0,
     recipient: address,
@@ -171,3 +198,5 @@ export async function createUniswapV3Pool(
 
   return poolAddress;
 }
+
+ 

@@ -1,6 +1,0 @@
-[dotenv@16.6.0] injecting env (2) from .env
-🚀 ~ test ~ amountSHT: BigNumber { _hex: '0x8ac7230489e80000', _isBigNumber: true }
-🚀 ~ :21 ~ test ~ amountLINK: BigNumber { _hex: '0x2386f26fc10000', _isBigNumber: true }
-🚀 ~ :17 ~ Approving tokens of given address:
-🚀 ~ :21 ~ Approved tokens of USDC address:
-🚀 ~ :26 ~ Got Position Manager Contract.

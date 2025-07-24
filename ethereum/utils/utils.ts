@@ -1,3 +1,6 @@
+import { encodeSqrtRatioX96, TickMath} from "@uniswap/v3-sdk";
+import JSBI from "jsbi";
+
 // Log base 1.0001
 export function logBase1_0001(x: number): number {
   return Math.log(x) / Math.log(1.0001);
@@ -34,6 +37,76 @@ export function getTickRangeFromPrice(
 
   const tickLower = nearestUsableTick(rawTickLower, tickSpacing);
   const tickUpper = nearestUsableTick(rawTickUpper, tickSpacing);
+
+  return { tickLower, tickUpper };
+}
+
+// export function getTickRange(
+//   priceLower: number,
+//   priceUpper: number,
+//   feeTier: number
+// ): { tickLower: number; tickUpper: number } {
+//   const sqrtPriceLowerX96 = encodeSqrtRatioX96(1, priceUpper);
+//   const sqrtPriceUpperX96 = encodeSqrtRatioX96(1, priceLower);
+
+//   let tickLower = TickMath.getTickAtSqrtRatio(sqrtPriceLowerX96);
+//   let tickUpper = TickMath.getTickAtSqrtRatio(sqrtPriceUpperX96);
+
+//   // Calculate tickSpacing based on fee tier (per Uniswap V3 convention)
+//   const tickSpacing = getTickSpacing(feeTier);
+
+//   // Align ticks to spacing
+//   tickLower = Math.floor(tickLower / tickSpacing) * tickSpacing;
+//   tickUpper = Math.ceil(tickUpper / tickSpacing) * tickSpacing;
+
+//   return { tickLower, tickUpper };
+// }
+
+function getTickSpacing(feeTier: number): number {
+  switch (feeTier) {
+    case 100: return 1;
+    case 500: return 10;
+    case 3000: return 60;
+    case 10000: return 200;
+    default:
+      throw new Error("Unsupported fee tier");
+  }
+}
+
+
+/**
+ * Returns sqrtPriceX96 using integer-safe encoding.
+ * @param reserve1 Token1 reserve (quote token)
+ * @param reserve0 Token0 reserve (base token)
+ */
+export function encodePriceSqrt(reserve1: number, reserve0: number): JSBI {
+  const scale = 1e6; // to preserve precision and avoid float
+  const numerator = JSBI.BigInt(Math.floor(reserve1 * scale));
+  const denominator = JSBI.BigInt(Math.floor(reserve0 * scale));
+
+  return encodeSqrtRatioX96(numerator, denominator);
+}
+
+/**
+ * Calculates tickLower and tickUpper based on desired price bounds.
+ * Handles float safely using scaled integers.
+ */
+export function getTickRange(
+  priceLower: number,
+  priceUpper: number,
+  feeTier: number
+): { tickLower: number; tickUpper: number } {
+  const sqrtPriceLowerX96 = encodePriceSqrt(1, priceUpper); // 1/upper
+  const sqrtPriceUpperX96 = encodePriceSqrt(1, priceLower); // 1/lower
+
+  let tickLower = TickMath.getTickAtSqrtRatio(sqrtPriceLowerX96);
+  let tickUpper = TickMath.getTickAtSqrtRatio(sqrtPriceUpperX96);
+
+  // Round ticks to match the spacing
+  const tickSpacing = getTickSpacing(feeTier);
+
+  tickLower = Math.floor(tickLower / tickSpacing) * tickSpacing;
+  tickUpper = Math.ceil(tickUpper / tickSpacing) * tickSpacing;
 
   return { tickLower, tickUpper };
 }
