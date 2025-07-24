@@ -44,8 +44,6 @@ export async function createClmmPool({
   startPrice?: string;
   endPrice?: string;
 }) {
-  console.log("min1: ", mint1);
-  console.log("min2 ", mint2);
 
   // Define the transaction format (legacy or V0); we use V0
   const txVersion = TxVersion.V0;

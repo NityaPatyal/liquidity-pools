@@ -1,5 +1,7 @@
 import { Keypair } from "@solana/web3.js";
-import {createClmmPool} from "../write/createClmmPool.testnet";
+import {createClmmPool} from "../write/createClmmPool.mainnet";
+// import {createClmmPool} from "../write/createClmmPool.devnet";
+
 import * as bip39 from "bip39";
 import { derivePath } from "ed25519-hd-key";
 import dotenv from "dotenv";
@@ -31,6 +33,8 @@ console.log("publicKey: ",keypair.publicKey.toString())
 
 createClmmPool({
   privateKeyBase58: privateKeyBase58,
-  mint1: "5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs", // Wrapped Sol
-  mint2: "GJ6EnoBbDsAoyGkxEv1dxh7fi5vq3cUyTfhnA5YJ9NyW", // Unknown Token 1: GJ6Eno
+  // mint1: "5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs", // Unknow Token 2: 5zT9qL
+  // mint2: "GJ6EnoBbDsAoyGkxEv1dxh7fi5vq3cUyTfhnA5YJ9NyW", // Unknown Token 1: GJ6Eno
+  mint1: "So11111111111111111111111111111111111111112", //WSOL
+  mint2: "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v" //USDC
 });

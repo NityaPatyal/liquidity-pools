@@ -1,9 +1,7 @@
-import { CLMM_PROGRAM_ID, DEVNET_PROGRAM_ID } from '@raydium-io/raydium-sdk-v2'
+import { CLMM_PROGRAM_ID } from '@raydium-io/raydium-sdk-v2'
 import { PublicKey } from '@solana/web3.js'
-import { initSdk, txVersion } from '../config.template.ts'
+import { initSdk, txVersion } from '../config.template'
 import Decimal from 'decimal.js'
-import BN from 'bn.js'
-import { devConfigs } from './utils'
 
 export const createPool = async () => {
   const raydium = await initSdk({ loadToken: true })

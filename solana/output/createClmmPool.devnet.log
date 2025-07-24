@@ -1,6 +1,5 @@
 🚀 ~ :15 ~ clusterApiUrl("devnet"): https://api.devnet.solana.com
 function
-🚀 ~ :15 ~ getSolanaKeypairFromMnemonic ~ seed: <Buffer 63 97 c6 57 2d 37 08 6d 37 ae 48 49 5a 32 78 23 da 4d 5e 05 0d 31 ad 1b 49 de be f4 66 cc d7 a4 cc 7f cc 88 45 40 fe b4 a4 7b 2e 06 1e 35 2c 4c 80 ee ... 14 more bytes>
 publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
 min1:  5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs
 min2  GJ6EnoBbDsAoyGkxEv1dxh7fi5vq3cUyTfhnA5YJ9NyW
