@@ -13,11 +13,7 @@ const MNEMONIC = process.env.MNEMONIC;
 
 // Derive Solana private key from mnemonic
 function getSolanaKeypairFromMnemonic(mnemonic: string, derivationPath = "m/44'/501'/0'/0'") {
-  console.log(typeof bip39.mnemonicToSeedSync); // should log 'function'
-
   const seed = bip39.mnemonicToSeedSync(mnemonic);
-  console.log("🚀 ~ :15 ~ getSolanaKeypairFromMnemonic ~ seed:", seed)
-
   const derivedSeed = derivePath(derivationPath, seed.toString("hex")).key;
   const keypair = Keypair.fromSeed(derivedSeed);
 

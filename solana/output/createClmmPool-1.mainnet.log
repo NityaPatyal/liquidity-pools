@@ -1,26 +1,5 @@
-[dotenv@16.6.0] injecting env (2) from .env
-🚀 ~ :15 ~ clusterApiUrl("mainnet"): https://api.mainnet-beta.solana.com/
-[dotenv@16.6.0] injecting env (2) from .env
-function
-publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
-🚀 ~ :74 ~ owner: Keypair {
-  _keypair: {
-    publicKey: Uint8Array(32) [
-       56, 168,   6, 214, 206,  16, 183,  87,
-      172, 124,  44,  56, 188,  92, 138, 153,
-       20,  45, 212, 200, 182,  23, 250, 239,
-        0, 181, 225, 153,  84, 172,  73, 222
-    ],
-    secretKey: Uint8Array(64) [
-       92,  64, 242,  85,  87, 236,  26,  68,  29,  41,  23,
-      214, 194, 198, 114,  83, 188, 234, 252, 122,   5,  93,
-       21, 151,  53, 210, 249, 181, 179,  57,  69, 205,  56,
-      168,   6, 214, 206,  16, 183,  87, 172, 124,  44,  56,
-      188,  92, 138, 153,  20,  45, 212, 200, 182,  23, 250,
-      239,   0, 181, 225, 153,  84, 172,  73, 222
-    ]
-  }
-}
+[dotenv@16.6.0] injecting env (4) from .env
+
 🚀 ~ :88 ~ token1: {
   chainId: 101,
   address: 'So11111111111111111111111111111111111111112',
@@ -43,6 +22,57 @@ publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
   name: 'USD Coin',
   decimals: 6,
   tags: [ 'hasFreeze' ],
+  extensions: {},
+  type: 'raydium',
+  priority: 2
+}
+🚀 ~ :43 ~ order check:
+🚀 ~ :46 ~ needed order swap: token1:  {
+  chainId: 101,
+  address: 'So11111111111111111111111111111111111111112',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: 'https://img-v1.raydium.io/icon/So11111111111111111111111111111111111111112.png',
+  symbol: 'WSOL',
+  name: 'Wrapped SOL',
+  decimals: 9,
+  tags: [],
+  extensions: {},
+  type: 'raydium',
+  priority: 2
+}  token2:  {
+  chainId: 101,
+  address: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: 'https://img-v1.raydium.io/icon/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v.png',
+  symbol: 'USDC',
+  name: 'USD Coin',
+  decimals: 6,
+  tags: [ 'hasFreeze' ],
+  extensions: {},
+  type: 'raydium',
+  priority: 2
+}
+🚀 ~ :48 ~ order swaped: token1:  {
+  chainId: 101,
+  address: 'EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: 'https://img-v1.raydium.io/icon/EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v.png',
+  symbol: 'USDC',
+  name: 'USD Coin',
+  decimals: 6,
+  tags: [ 'hasFreeze' ],
+  extensions: {},
+  type: 'raydium',
+  priority: 2
+}  token2:  {
+  chainId: 101,
+  address: 'So11111111111111111111111111111111111111112',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: 'https://img-v1.raydium.io/icon/So11111111111111111111111111111111111111112.png',
+  symbol: 'WSOL',
+  name: 'Wrapped SOL',
+  decimals: 9,
+  tags: [],
   extensions: {},
   type: 'raydium',
   priority: 2
@@ -229,7 +259,7 @@ publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
     defaultRangePoint: [ 0.01, 0.05, 0.1, 0.2, 0.5 ]
   }
 ]
-🚀 ~ :101 ~ config: {
+🚀 ~ :71 ~ config: {
   id: PublicKey [PublicKey(9iFER3bpjf1PTTCQCfTRu17EJgvsxo9pVyA9QWwEuX4x)] {
     _bn: <BN: 816e66630c3bb724dc59e49f6cc4306e603a6aacca06fa3e34e2b40ad5979d8d>
   },
@@ -243,105 +273,8 @@ publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
   fundOwner: '',
   description: ''
 }
-⏳ Creating Pool...
-🚀 createPoolResult: {
-  builder: $o {
-    instructions: [ [TransactionInstruction] ],
-    endInstructions: [],
-    lookupTableAddress: [],
-    signers: [ [Keypair] ],
-    instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
-    endInstructionTypes: [],
-    connection: Connection {
-      _commitment: undefined,
-      _confirmTransactionInitialTimeout: undefined,
-      _rpcEndpoint: 'https://api.mainnet-beta.solana.com/',
-      _rpcWsEndpoint: 'wss://api.mainnet-beta.solana.com/',
-      _rpcClient: [ClientBrowser],
-      _rpcRequest: [Function (anonymous)],
-      _rpcBatchRequest: [Function (anonymous)],
-      _rpcWebSocket: [RpcWebSocketClient],
-      _rpcWebSocketConnected: false,
-      _rpcWebSocketHeartbeat: null,
-      _rpcWebSocketIdleTimeout: null,
-      _rpcWebSocketGeneration: 0,
-      _disableBlockhashCaching: false,
-      _pollingBlockhash: false,
-      _blockhashInfo: [Object],
-      _nextClientSubscriptionId: 0,
-      _subscriptionDisposeFunctionsByClientSubscriptionId: {},
-      _subscriptionHashByClientSubscriptionId: {},
-      _subscriptionStateChangeCallbacksByHash: {},
-      _subscriptionCallbacksByServerSubscriptionId: {},
-      _subscriptionsByHash: {},
-      _subscriptionsAutoDisposedByRpc: Set(0) {},
-      getBlockHeight: [AsyncFunction (anonymous)]
-    },
-    feePayer: PublicKey [PublicKey(4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM)] {
-      _bn: <BN: 38a806d6ce10b757ac7c2c38bc5c8a99142dd4c8b617faef00b5e19954ac49de>
-    },
-    signAllTransactions: undefined,
-    owner: en { _owner: [Keypair] },
-    cluster: 'mainnet',
-    blockhashCommitment: 'finalized',
-    loopMultiTxStatus: false
-  },
-  transaction: VersionedTransaction {
-    signatures: [ [Uint8Array] ],
-    message: MessageV0 {
-      header: [Object],
-      staticAccountKeys: [Array],
-      recentBlockhash: 'Dy9Mrpo7gkDN3bJ6wgwKMXLDEW9Nwj35Fbdq1T3ZM1bB',
-      compiledInstructions: [Array],
-      addressTableLookups: [Array]
-    }
-  },
-  signers: [ Keypair { _keypair: [Object] } ],
-  instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
-  execute: [AsyncFunction: execute],
-  extInfo: {
-    address: {
-      poolId: [PublicKey [PublicKey(8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj)]],
-      observationId: 'caNpYLajzNJ7akcJmixhKX8N1cUAt6kb3bVPGKydWN4',
-      exBitmapAccount: 'DoPuiZfJu7sypqwR4eiU7C5TMcmmiFoU4HaF5SoD8mRy',
-      mintAVault: [PublicKey [PublicKey(6P4tvbzRY6Bh3MiWDHuLqyHywovsRwRpfskPvyeSoHsz)]],
-      mintBVault: [PublicKey [PublicKey(6mK4Pxs6GhwnessH7CvPivqDYauiHZmAdbEFDpXFk9zt)]],
-      programId: 'CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK',
-      id: '8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj',
-      mintA: [Object],
-      mintB: [Object],
-      openTime: '0',
-      vault: [Object],
-      rewardInfos: [],
-      config: [Object]
-    },
-    mockPoolInfo: {
-      type: 'Concentrated',
-      rewardDefaultPoolInfos: 'Clmm',
-      id: '8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj',
-      mintA: [Object],
-      mintB: [Object],
-      feeRate: 100,
-      openTime: '0',
-      programId: 'CAMMCzo5YL8w4VFF8KVHrK22GGUsp5VTaW7grrKgrWqK',
-      price: 1,
-      config: [Object],
-      burnPercent: 0,
-      tvl: 0,
-      volumeQuote: 0,
-      mintAmountA: 0,
-      mintAmountB: 0,
-      rewardDefaultInfos: [],
-      farmUpcomingCount: 0,
-      farmOngoingCount: 0,
-      farmFinishedCount: 0,
-      day: [Object],
-      week: [Object],
-      month: [Object],
-      pooltype: []
-    }
-  }
-}
+🧠 Expected pool PDA: 7S3nogaMk9N75ctQ3fDGwZPNE2nr3HsUDuf4Wd6rUvHv
+🆕 Pool not found. Proceeding to create...
 🚀 ~ :88 ~ createPoolResult: {
   builder: $o {
     instructions: [ [TransactionInstruction] ],
@@ -389,7 +322,7 @@ publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
     message: MessageV0 {
       header: [Object],
       staticAccountKeys: [Array],
-      recentBlockhash: 'Dy9Mrpo7gkDN3bJ6wgwKMXLDEW9Nwj35Fbdq1T3ZM1bB',
+      recentBlockhash: 'BnsARezbPJKLY4efMtnzEZzMPUKrQggA7BTqEF62djxK',
       compiledInstructions: [Array],
       addressTableLookups: [Array]
     }
@@ -442,5 +375,10 @@ publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
 }
 🆔 Pool ID: 8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj
 simulate tx string: [
-  'Ad6xxMFfx+p79rPVaFiCITamtJhWb59uKPMS1Ah7+5LhJ8SDdvlqCdPe0m4BVCeydXl7jNRGgWZxP6ITqXt2egGAAQADCTioBtbOELdXrHwsOLxcipkULdTIthf67wC14ZlUrEnedOcAnBMfhWowYtocsl7sG7UYkXNf30dW2/18J/VmL4BP8Z3mhIygvyFtFa9/EwzONZXqRLOU2dj2AS2SjhHeLVWkaLq1yELGn0U6WGNL3EOmgZZJtby8gsfhQwuS+7ZVCR0RIOmhVYC/IqFBLGbC8airoS28ufowJLrEC4BdrPm+Lt0PedY9NgQQ36ut3S4e1oQqxkG/jSk349YcI9L0sKXVyp4Ez121kLcUui/jLLFZEz/BwZK3Ilf9B9OcsEAeBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYcCuOH+nu845OAGHzEOHQoKaRSykYznnPibAQbxs7NKeAQYNAAkBBwgCAwQFCgoLDCDpktGOz2hAvCQ5HVAnbhgIAAAAAAAAAAAAAAAAAAAAAAGOxgDynMWeWti37hLCPMc7eluJFGJGzfDwv4BjrfMSdQAEJQEABQ=='
+  'AVVcnfYTJymzk6TGS2+DwTLCKXcCwWuEJ+vNP77VW/duuYwkGR2tllK6z0ovttgF3D5eajXl6Q7reqBYTtfvBwyAAQADCTioBtbOELdXrHwsOLxcipkULdTIthf67wC14ZlUrEnedOcAnBMfhWowYtocsl7sG7UYkXNf30dW2/18J/VmL4BP8Z3mhIygvyFtFa9/EwzONZXqRLOU2dj2AS2SjhHeLVWkaLq1yELGn0U6WGNL3EOmgZZJtby8gsfhQwuS+7ZVCR0RIOmhVYC/IqFBLGbC8airoS28ufowJLrEC4BdrPm+Lt0PedY9NgQQ36ut3S4e1oQqxkG/jSk349YcI9L0sKXVyp4Ez121kLcUui/jLLFZEz/BwZK3Ilf9B9OcsEAeBpuIV/6rgYT7aH9jRhjANdrEOdwa6ztVmKDwAAAAAAHG+nrzvtutOj1l82qryXQxsbvkwtL24OR8pgIDRS9dYaBUuX7wJdAoZgZB6j6zDiRVBsWg+DXy6QHhzT6Bv/dAAQYNAAkBBwgCAwQFCgoLDCDpktGOz2hAvCQ5HVAnbhgIAAAAAAAAAAAAAAAAAAAAAAGOxgDynMWeWti37hLCPMc7eluJFGJGzfDwv4BjrfMSdQAEJQEABQ=='
 ]
+
+❌ Error: {
+  InstructionError: [ 0, { Custom: 0 } ],
+  txId: '2hzBy7v6ojtwX3A2hGbkAoucira3C85WEYy9zaVKoDhTowsr2N3U7xYJhymwpFdXmKnEi9SXZfdveQoAbLJoQLVq'
+}

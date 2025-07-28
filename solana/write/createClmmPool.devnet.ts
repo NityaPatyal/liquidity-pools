@@ -57,6 +57,14 @@ export async function createClmmPool({
     const owner = Keypair.fromSecretKey(secretKey);
     console.log("🚀 ~ :74 ~ owner:", owner)
 
+
+    // Ensure tokens are in correct order
+    console.log("order check");
+    if (mint1 > mint2) {
+      console.log("order reveresed");
+      [mint1, mint2] = [mint2, mint1]; // Swap if out of order
+    }
+
     // Initialize Raydium SDK with wallet + connection
     const raydium = await Raydium.load({
       owner,

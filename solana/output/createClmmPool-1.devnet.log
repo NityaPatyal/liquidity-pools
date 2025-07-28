@@ -1,26 +1,7 @@
+[dotenv@16.6.0] injecting env (4) from .env
 🚀 ~ :15 ~ clusterApiUrl("devnet"): https://api.devnet.solana.com
+[dotenv@16.6.0] injecting env (4) from .env
 function
-publicKey:  4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM
-min1:  5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs
-min2  GJ6EnoBbDsAoyGkxEv1dxh7fi5vq3cUyTfhnA5YJ9NyW
-🚀 ~ :74 ~ owner: Keypair {
-  _keypair: {
-    publicKey: Uint8Array(32) [
-       56, 168,   6, 214, 206,  16, 183,  87,
-      172, 124,  44,  56, 188,  92, 138, 153,
-       20,  45, 212, 200, 182,  23, 250, 239,
-        0, 181, 225, 153,  84, 172,  73, 222
-    ],
-    secretKey: Uint8Array(64) [
-       92,  64, 242,  85,  87, 236,  26,  68,  29,  41,  23,
-      214, 194, 198, 114,  83, 188, 234, 252, 122,   5,  93,
-       21, 151,  53, 210, 249, 181, 179,  57,  69, 205,  56,
-      168,   6, 214, 206,  16, 183,  87, 172, 124,  44,  56,
-      188,  92, 138, 153,  20,  45, 212, 200, 182,  23, 250,
-      239,   0, 181, 225, 153,  84, 172,  73, 222
-    ]
-  }
-}
 🚀 ~ :88 ~ token1: {
   chainId: 101,
   address: '5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs',
@@ -125,7 +106,7 @@ DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID:  PublicKey [PublicKey(DRayAUgENGQBKVaX8owNhgz
     message: MessageV0 {
       header: [Object],
       staticAccountKeys: [Array],
-      recentBlockhash: 'EsRG68wsdgyaNHsJoXtfXKDpoNYbZnCKU755agAMjKHj',
+      recentBlockhash: '427tjUD2APfks9ixwDm7xYforCE1jXYqduFsNFu9hZyN',
       compiledInstructions: [Array],
       addressTableLookups: [Array]
     }
@@ -223,7 +204,7 @@ DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID:  PublicKey [PublicKey(DRayAUgENGQBKVaX8owNhgz
     message: MessageV0 {
       header: [Object],
       staticAccountKeys: [Array],
-      recentBlockhash: 'EsRG68wsdgyaNHsJoXtfXKDpoNYbZnCKU755agAMjKHj',
+      recentBlockhash: '427tjUD2APfks9ixwDm7xYforCE1jXYqduFsNFu9hZyN',
       compiledInstructions: [Array],
       addressTableLookups: [Array]
     }
@@ -276,5 +257,10 @@ DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID:  PublicKey [PublicKey(DRayAUgENGQBKVaX8owNhgz
 }
 🆔 Pool ID: HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom
 simulate tx string: [
-  'AQx1xqWXlIr1tgQQYe/ILgslNWEivBZsuteKWNwrs6uB4OCE76j+W6CfAF2rinUGdhPP5WByuNEAf7Sga0v7JQ+AAQAECjioBtbOELdXrHwsOLxcipkULdTIthf67wC14ZlUrEne88pgYQithQHUelmyZ+uQnyNHqtve0DGcRODPDfD1YkzIbn84m8LChhK4WZ8u26F3EPpXOAkIkRPB5cNY4C1dGpWX7yyMgJo3HR7InUQxfkuOloRvarDBAF9AApNYQtoO33WfmRsLR6HPEDe//I/6zrYx4gs+AzC+7eCYhnDdiRFZyJbC4nn5NXATjjg0W/wF2MfAttSKNrOVU15QYp8Yn7iYlzT8s4yRaNhTx1O2uKQ2EM3TJa+7xy/UFTbbzcJYqXikpoTBl5f2wBGaq2qzE9TTIwTzDdJJshrpb0YPIfNKJmygOh0GkE2c/YvUTlfz4GC3zxD6H5ionewBIuETFuNAGZk3J5bfnHOS9E4T1nyR+dPiNOPjnOBsvv0rNWrxzhJmytsczOLEpWKv42Lv24Rz+PsZ/EdN0jkwWBAn7QIBBg0ABwEICQIDBAUKCgsMIOmS0Y7PaEC8AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAcTrsmxH1X0mdqMX8KwrApwkEJMpr5lIg+vhgWoCNV5OAAMVFBk='
+  'AWNAzKRZ8pzbpHDTWq4sFsFaexnW9OXMvOjkaOhCknY0FGo2NVUrHWUMIf6yN5vbit93y+X2b8zStzidgNAmGAGAAQAECjioBtbOELdXrHwsOLxcipkULdTIthf67wC14ZlUrEne88pgYQithQHUelmyZ+uQnyNHqtve0DGcRODPDfD1YkzIbn84m8LChhK4WZ8u26F3EPpXOAkIkRPB5cNY4C1dGpWX7yyMgJo3HR7InUQxfkuOloRvarDBAF9AApNYQtoO33WfmRsLR6HPEDe//I/6zrYx4gs+AzC+7eCYhnDdiRFZyJbC4nn5NXATjjg0W/wF2MfAttSKNrOVU15QYp8Yn7iYlzT8s4yRaNhTx1O2uKQ2EM3TJa+7xy/UFTbbzcJYqXikpoTBl5f2wBGaq2qzE9TTIwTzDdJJshrpb0YPIfNKJmygOh0GkE2c/YvUTlfz4GC3zxD6H5ionewBIuETFuNAGZk3J5bfnHOS9E4T1nyR+dPiNOPjnOBsvv0rNWrxLNxvL9gleXXIWFv5uaKlucBuIXJHPyOA8hCLsd5WFoUBBg0ABwEICQIDBAUKCgsMIOmS0Y7PaEC8AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAcTrsmxH1X0mdqMX8KwrApwkEJMpr5lIg+vhgWoCNV5OAAMVFBk='
 ]
+
+❌ Error: {
+  InstructionError: [ 0, { Custom: 3007 } ],
+  txId: '2z6UssfYEnUSQQMFo4RB3smgrCpdooAxgsSjYB754d7QpuiU5ARv9sb3MZYYHu3VLMV3g8xgAnH32CCekhoh4Rwn'
+}

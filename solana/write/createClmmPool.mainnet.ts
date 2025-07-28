@@ -3,15 +3,13 @@ import {
   TxVersion,
   TickUtils,
   CLMM_PROGRAM_ID,
+  getPdaPoolId
 } from "@raydium-io/raydium-sdk-v2";
+import BN from "bn.js";
 
 import { clusterApiUrl, Connection, Keypair, PublicKey } from "@solana/web3.js";
 import bs58 from "bs58";
 import Decimal from "decimal.js";
-import dotenv from "dotenv";
-dotenv.config();
-
-console.log(`🚀 ~ :15 ~ clusterApiUrl("mainnet"):`, clusterApiUrl("mainnet-beta"))
 
 export async function createClmmPool({
   privateKeyBase58,
@@ -50,51 +48,73 @@ export async function createClmmPool({
     });
 
     // 🪙 Fetch token metadata from chain or Raydium registry
-    const token1 = await raydium.token.getTokenInfo(mint1);
+    let token1 = await raydium.token.getTokenInfo(mint1);
     console.log("🚀 ~ :88 ~ token1:", token1)
 
-    const token2 = await raydium.token.getTokenInfo(mint2);
+    let token2 = await raydium.token.getTokenInfo(mint2);
     console.log("🚀 ~ :91 ~ token2:", token2)
+
+    // Ensure tokens are in correct order
+    console.log("🚀 ~ :43 ~ order check:");
+
+    if (token1.address > token2.address) {
+      console.log("🚀 ~ :46 ~ needed order swap: token1: ", token1, " token2: ", token2);
+      [token1, token2] = [token2, token1]; // Swap if out of order
+      console.log("🚀 ~ :48 ~ order swaped: token1: ", token1, " token2: ", token2);
+    }
 
     const clmmConfigs = await raydium.api.getClmmConfigs()
 
     console.log("🚀 ~ :79 ~ clmmConfigs:", clmmConfigs)
 
-    // const clmmConfigs = await raydium.api.getClmmConfigs();
-
     // 🧩 Build the config object for pool creation
     const config = { ...clmmConfigs[0], id: new PublicKey(clmmConfigs[0].id), fundOwner: '', description: '' };
+    console.log("🚀 ~ :71 ~ config:", config)
 
-    console.log("🚀 ~ :101 ~ config:", config)
+    const { publicKey: expectedPoolId } = getPdaPoolId(
+      CLMM_PROGRAM_ID,
+      config.id,
+      new PublicKey(token1.address),
+      new PublicKey(token2.address)
+    );
 
-    console.log("⏳ Creating Pool...");
+    console.log("🧠 Expected pool PDA:", expectedPoolId.toBase58());
+    let poolResultFromRPC;
 
-    // 🔨 Create CLMM pool with the selected tokens and config
-    let createPoolResult;
-    createPoolResult = await raydium.clmm.createPool({
+    try {
+
+      poolResultFromRPC = await raydium.clmm.getPoolInfoFromRpc(expectedPoolId.toBase58());
+
+      console.log("⚠️ Pool already exists. Proceeding to add liquidity...");
+    } catch (error) {
+      console.log("🆕 Pool not found. Proceeding to create...");
+
+      let createPoolResult = await raydium.clmm.createPool({
         programId: CLMM_PROGRAM_ID,
         mint1: token1,
         mint2: token2,
         ammConfig: config,
         initialPrice: new Decimal(1),
         txVersion,
-    });
+      });
 
-    console.log("🚀 createPoolResult:", createPoolResult);
+      console.log("🚀 ~ :88 ~ createPoolResult:", createPoolResult);
 
-    console.log("🚀 ~ :88 ~ createPoolResult:", createPoolResult);
+      const poolId = createPoolResult.extInfo.mockPoolInfo.id;
 
-    const poolId = createPoolResult.extInfo.mockPoolInfo.id;
+      console.log("🆔 Pool ID:", poolId);
 
-    console.log("🆔 Pool ID:", poolId);
+      // 📤 Send and confirm the pool creation transaction
+      const { txId: createTxId } = await createPoolResult.execute({ sendAndConfirm: true });
 
-    // 📤 Send and confirm the pool creation transaction
-    const { txId: createTxId } = await createPoolResult.execute({ sendAndConfirm: true });
+      console.log(`✅ Pool Created: https://explorer.solana.com/tx/${createTxId}?cluster=mainnet`);
 
-    console.log(`✅ Pool Created: https://explorer.solana.com/tx/${createTxId}?cluster=mainnet`);
+      // 🔍 Fetch full pool info and pool keys from the blockchain
+      poolResultFromRPC = await raydium.clmm.getPoolInfoFromRpc(poolId);
 
-    // 🔍 Fetch full pool info and pool keys from the blockchain
-    const { poolInfo, poolKeys } = await raydium.clmm.getPoolInfoFromRpc(poolId);
+    }
+
+    const { poolInfo, poolKeys } = poolResultFromRPC;
 
     // 🧮 Calculate the tick range based on user-defined start and end price
     const { tick: lowerTick } = TickUtils.getPriceAndTick({
@@ -118,8 +138,8 @@ export async function createClmmPool({
       tickLower: Math.min(lowerTick, upperTick),  // Ensure tickLower < tickUpper
       tickUpper: Math.max(lowerTick, upperTick),
       base: "MintA",                               // Which mint is considered "base"
-      baseAmount: new Decimal(0),                  // No liquidity deposited
-      otherAmountMax: new Decimal(0),              // No liquidity deposited
+      baseAmount: new BN(0),                  // No liquidity deposited
+      otherAmountMax: new BN(0),              // No liquidity deposited
       ownerInfo: {
         useSOLBalance: true,                       // Use SOL for fees if needed
       },
