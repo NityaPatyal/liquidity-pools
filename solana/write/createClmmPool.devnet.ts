@@ -4,30 +4,26 @@ import {
   DEVNET_PROGRAM_ID,
   TickUtils,
 } from "@raydium-io/raydium-sdk-v2";
-// import { fetchAmmConfig } from '@raydium-io/raydium-sdk-v2';
 
 import { clusterApiUrl, Connection, Keypair, PublicKey } from "@solana/web3.js";
+import BN from "bn.js";
 import bs58 from "bs58";
 import Decimal from "decimal.js";
-import dotenv from "dotenv";
-dotenv.config();
-
-console.log(`🚀 ~ :15 ~ clusterApiUrl("devnet"):`, clusterApiUrl("devnet"))
 
 // ----------------------
 // ⚙️ Configuration for CLMM Pool Creation (Raydium recommended values)
 // ----------------------
 const devConfigs = [
   {
-    id: 'GjLEiquek1Nc2YjcBhufUGFRkaqW1JhaGjsdFd8mys38',
-    index: 3,
+    id: 'CQYbhr6amxUER4p5SC44C63R4qw4NFc9Z4Db9vF4tZwG',
+    index: 0,
     protocolFeeRate: 120000,
-    tradeFeeRate: 10000,
-    tickSpacing: 120,
+    tradeFeeRate: 100,
+    tickSpacing: 10,
     fundFeeRate: 40000,
-    description: 'Best for exotic pairs',
-    defaultRange: 0.1,
-    defaultRangePoint: [0.01, 0.05, 0.1, 0.2, 0.5],
+    description: 'Best for very stable pairs',
+    defaultRange: 0.005,
+    defaultRangePoint: [0.001, 0.003, 0.005, 0.008, 0.01],
   },
 ];
 
@@ -64,11 +60,12 @@ export async function createClmmPool({
       console.log("order reveresed");
       [mint1, mint2] = [mint2, mint1]; // Swap if out of order
     }
+    const connection = new Connection(clusterApiUrl("devnet"));
 
     // Initialize Raydium SDK with wallet + connection
     const raydium = await Raydium.load({
       owner,
-      connection: new Connection(clusterApiUrl("devnet")),
+      connection,
       cluster: "devnet",
       disableFeatureCheck: true,         // Skip feature checking
       disableLoadToken: false,           // Let Raydium fetch token metadata
@@ -85,20 +82,14 @@ export async function createClmmPool({
     const clmmConfigs = devConfigs;
     console.log("🚀 ~ :79 ~ clmmConfigs:", clmmConfigs)
 
-    // const clmmConfigs = await raydium.api.getClmmConfigs();
-
     // 🧩 Build the config object for pool creation
     const config = {
       ...clmmConfigs[0],
-      id: new PublicKey("CQYbhr6amxUER4p5SC44C63R4qw4NFc9Z4Db9vF4tZwG"), // Convert config ID to PublicKey
+      id: new PublicKey(clmmConfigs[0].id), 
       fundOwner: "",                       // Optional: no fund owner set
       description: "",
     };
     console.log("🚀 ~ :101 ~ config:", config)
-    console.log("DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID: ",DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID);
-
-    // const configs = await fetchAmmConfig(Connection, DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID);
-    // console.log(configs.map(c => c.id.toBase58()));
 
     console.log("⏳ Creating Pool...");
 
@@ -106,7 +97,7 @@ export async function createClmmPool({
     let createPoolResult
     try {
       createPoolResult = await raydium.clmm.createPool({
-        programId: DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID,
+        programId: DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID, // Raydium’s program
         mint1: token1,
         mint2: token2,
         ammConfig: config,
@@ -156,8 +147,8 @@ export async function createClmmPool({
       tickLower: Math.min(lowerTick, upperTick),  // Ensure tickLower < tickUpper
       tickUpper: Math.max(lowerTick, upperTick),
       base: "MintA",                               // Which mint is considered "base"
-      baseAmount: new Decimal(0),                  // No liquidity deposited
-      otherAmountMax: new Decimal(0),              // No liquidity deposited
+      baseAmount: new BN(0),                  // No liquidity deposited
+      otherAmountMax: new BN(0),              // No liquidity deposited
       ownerInfo: {
         useSOLBalance: true,                       // Use SOL for fees if needed
       },
