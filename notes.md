@@ -1,0 +1,13 @@
+# UniswapV3Factory	
+
+- Mainnet: `0x1F98431c8aD98523631AE4a59f267346ea31F984`	
+- Sepolia: `0x0227628f3F023bb0B980b67D528571c95c6DaC1c`
+
+# NonfungiblePositionManager	
+
+- Mainnet: `0xC36442b4a4522E871399CD717aBDD847Ab11FE88`
+- Sepolia: `0x1238536071E1c677A632429e3655c799b22cDA52`
+
+## Shiro Token Contract Address
+
+- Sepolia:  `0xe7593c95763E75165d6B3e8477470169a5fe4d7a`

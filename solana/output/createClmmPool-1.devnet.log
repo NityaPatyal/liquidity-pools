@@ -1,0 +1,266 @@
+[dotenv@16.6.0] injecting env (4) from .env
+🚀 ~ :15 ~ clusterApiUrl("devnet"): https://api.devnet.solana.com
+[dotenv@16.6.0] injecting env (4) from .env
+function
+🚀 ~ :88 ~ token1: {
+  chainId: 101,
+  address: '5zT9qL6L1BnCJ9ptWXE7HmCoG93Q5qdZZvDuJMMAiBjs',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: '',
+  symbol: '5zT9qL',
+  name: '5zT9qL',
+  decimals: 8,
+  tags: [],
+  extensions: {},
+  priority: 0,
+  type: 'unknown'
+}
+🚀 ~ :91 ~ token2: {
+  chainId: 101,
+  address: 'GJ6EnoBbDsAoyGkxEv1dxh7fi5vq3cUyTfhnA5YJ9NyW',
+  programId: 'TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA',
+  logoURI: '',
+  symbol: 'GJ6Eno',
+  name: 'GJ6Eno',
+  decimals: 8,
+  tags: [],
+  extensions: {},
+  priority: 0,
+  type: 'unknown'
+}
+🚀 ~ :79 ~ clmmConfigs: [
+  {
+    id: 'GjLEiquek1Nc2YjcBhufUGFRkaqW1JhaGjsdFd8mys38',
+    index: 3,
+    protocolFeeRate: 120000,
+    tradeFeeRate: 10000,
+    tickSpacing: 120,
+    fundFeeRate: 40000,
+    description: 'Best for exotic pairs',
+    defaultRange: 0.1,
+    defaultRangePoint: [ 0.01, 0.05, 0.1, 0.2, 0.5 ]
+  }
+]
+🚀 ~ :101 ~ config: {
+  id: PublicKey [PublicKey(CQYbhr6amxUER4p5SC44C63R4qw4NFc9Z4Db9vF4tZwG)] {
+    _bn: <BN: a978a4a684c19797f6c0119aab6ab313d4d32304f30dd249b21ae96f460f21f3>
+  },
+  index: 3,
+  protocolFeeRate: 120000,
+  tradeFeeRate: 10000,
+  tickSpacing: 120,
+  fundFeeRate: 40000,
+  description: '',
+  defaultRange: 0.1,
+  defaultRangePoint: [ 0.01, 0.05, 0.1, 0.2, 0.5 ],
+  fundOwner: ''
+}
+DEVNET_PROGRAM_ID.CLMM_PROGRAM_ID:  PublicKey [PublicKey(DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH)] {
+  _bn: <BN: b8989734fcb38c9168d853c753b6b8a43610cdd325afbbc72fd41536dbcdc258>
+}
+⏳ Creating Pool...
+🚀 createPoolResult: {
+  builder: $o {
+    instructions: [ [TransactionInstruction] ],
+    endInstructions: [],
+    lookupTableAddress: [],
+    signers: [ [Keypair] ],
+    instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
+    endInstructionTypes: [],
+    connection: Connection {
+      _commitment: undefined,
+      _confirmTransactionInitialTimeout: undefined,
+      _rpcEndpoint: 'https://api.devnet.solana.com',
+      _rpcWsEndpoint: 'wss://api.devnet.solana.com',
+      _rpcClient: [ClientBrowser],
+      _rpcRequest: [Function (anonymous)],
+      _rpcBatchRequest: [Function (anonymous)],
+      _rpcWebSocket: [RpcWebSocketClient],
+      _rpcWebSocketConnected: false,
+      _rpcWebSocketHeartbeat: null,
+      _rpcWebSocketIdleTimeout: null,
+      _rpcWebSocketGeneration: 0,
+      _disableBlockhashCaching: false,
+      _pollingBlockhash: false,
+      _blockhashInfo: [Object],
+      _nextClientSubscriptionId: 0,
+      _subscriptionDisposeFunctionsByClientSubscriptionId: {},
+      _subscriptionHashByClientSubscriptionId: {},
+      _subscriptionStateChangeCallbacksByHash: {},
+      _subscriptionCallbacksByServerSubscriptionId: {},
+      _subscriptionsByHash: {},
+      _subscriptionsAutoDisposedByRpc: Set(0) {},
+      getBlockHeight: [AsyncFunction (anonymous)]
+    },
+    feePayer: PublicKey [PublicKey(4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM)] {
+      _bn: <BN: 38a806d6ce10b757ac7c2c38bc5c8a99142dd4c8b617faef00b5e19954ac49de>
+    },
+    signAllTransactions: undefined,
+    owner: en { _owner: [Keypair] },
+    cluster: 'devnet',
+    blockhashCommitment: 'finalized',
+    loopMultiTxStatus: false
+  },
+  transaction: VersionedTransaction {
+    signatures: [ [Uint8Array] ],
+    message: MessageV0 {
+      header: [Object],
+      staticAccountKeys: [Array],
+      recentBlockhash: '427tjUD2APfks9ixwDm7xYforCE1jXYqduFsNFu9hZyN',
+      compiledInstructions: [Array],
+      addressTableLookups: [Array]
+    }
+  },
+  signers: [ Keypair { _keypair: [Object] } ],
+  instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
+  execute: [AsyncFunction: execute],
+  extInfo: {
+    address: {
+      poolId: [PublicKey [PublicKey(HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom)]],
+      observationId: 'G3HwiTZaVSJpDnzZMWyQskHuUNuajxw2avE2gH9nKLFS',
+      exBitmapAccount: '73UgquKe2as4bnrcHsiN57Dz53FBxVd1dZmk3VEEDjyx',
+      mintAVault: [PublicKey [PublicKey(EVQGHpkCanQtt5CfVQkZXW8M7xMdsywezyMSYKPpQ2S5)]],
+      mintBVault: [PublicKey [PublicKey(B4x7sKr9nWZcB6Fsa81PujaUZAQjgg6pJrbALmduPk2R)]],
+      programId: 'DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH',
+      id: 'HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom',
+      mintA: [Object],
+      mintB: [Object],
+      openTime: '0',
+      vault: [Object],
+      rewardInfos: [],
+      config: [Object]
+    },
+    mockPoolInfo: {
+      type: 'Concentrated',
+      rewardDefaultPoolInfos: 'Clmm',
+      id: 'HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom',
+      mintA: [Object],
+      mintB: [Object],
+      feeRate: 10000,
+      openTime: '0',
+      programId: 'DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH',
+      price: 1,
+      config: [Object],
+      burnPercent: 0,
+      tvl: 0,
+      volumeQuote: 0,
+      mintAmountA: 0,
+      mintAmountB: 0,
+      rewardDefaultInfos: [],
+      farmUpcomingCount: 0,
+      farmOngoingCount: 0,
+      farmFinishedCount: 0,
+      day: [Object],
+      week: [Object],
+      month: [Object],
+      pooltype: []
+    }
+  }
+}
+🚀 ~ :88 ~ createPoolResult: {
+  builder: $o {
+    instructions: [ [TransactionInstruction] ],
+    endInstructions: [],
+    lookupTableAddress: [],
+    signers: [ [Keypair] ],
+    instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
+    endInstructionTypes: [],
+    connection: Connection {
+      _commitment: undefined,
+      _confirmTransactionInitialTimeout: undefined,
+      _rpcEndpoint: 'https://api.devnet.solana.com',
+      _rpcWsEndpoint: 'wss://api.devnet.solana.com',
+      _rpcClient: [ClientBrowser],
+      _rpcRequest: [Function (anonymous)],
+      _rpcBatchRequest: [Function (anonymous)],
+      _rpcWebSocket: [RpcWebSocketClient],
+      _rpcWebSocketConnected: false,
+      _rpcWebSocketHeartbeat: null,
+      _rpcWebSocketIdleTimeout: null,
+      _rpcWebSocketGeneration: 0,
+      _disableBlockhashCaching: false,
+      _pollingBlockhash: false,
+      _blockhashInfo: [Object],
+      _nextClientSubscriptionId: 0,
+      _subscriptionDisposeFunctionsByClientSubscriptionId: {},
+      _subscriptionHashByClientSubscriptionId: {},
+      _subscriptionStateChangeCallbacksByHash: {},
+      _subscriptionCallbacksByServerSubscriptionId: {},
+      _subscriptionsByHash: {},
+      _subscriptionsAutoDisposedByRpc: Set(0) {},
+      getBlockHeight: [AsyncFunction (anonymous)]
+    },
+    feePayer: PublicKey [PublicKey(4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM)] {
+      _bn: <BN: 38a806d6ce10b757ac7c2c38bc5c8a99142dd4c8b617faef00b5e19954ac49de>
+    },
+    signAllTransactions: undefined,
+    owner: en { _owner: [Keypair] },
+    cluster: 'devnet',
+    blockhashCommitment: 'finalized',
+    loopMultiTxStatus: false
+  },
+  transaction: VersionedTransaction {
+    signatures: [ [Uint8Array] ],
+    message: MessageV0 {
+      header: [Object],
+      staticAccountKeys: [Array],
+      recentBlockhash: '427tjUD2APfks9ixwDm7xYforCE1jXYqduFsNFu9hZyN',
+      compiledInstructions: [Array],
+      addressTableLookups: [Array]
+    }
+  },
+  signers: [ Keypair { _keypair: [Object] } ],
+  instructionTypes: [ 'CreateAccount', 'ClmmCreatePool' ],
+  execute: [AsyncFunction: execute],
+  extInfo: {
+    address: {
+      poolId: [PublicKey [PublicKey(HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom)]],
+      observationId: 'G3HwiTZaVSJpDnzZMWyQskHuUNuajxw2avE2gH9nKLFS',
+      exBitmapAccount: '73UgquKe2as4bnrcHsiN57Dz53FBxVd1dZmk3VEEDjyx',
+      mintAVault: [PublicKey [PublicKey(EVQGHpkCanQtt5CfVQkZXW8M7xMdsywezyMSYKPpQ2S5)]],
+      mintBVault: [PublicKey [PublicKey(B4x7sKr9nWZcB6Fsa81PujaUZAQjgg6pJrbALmduPk2R)]],
+      programId: 'DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH',
+      id: 'HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom',
+      mintA: [Object],
+      mintB: [Object],
+      openTime: '0',
+      vault: [Object],
+      rewardInfos: [],
+      config: [Object]
+    },
+    mockPoolInfo: {
+      type: 'Concentrated',
+      rewardDefaultPoolInfos: 'Clmm',
+      id: 'HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom',
+      mintA: [Object],
+      mintB: [Object],
+      feeRate: 10000,
+      openTime: '0',
+      programId: 'DRayAUgENGQBKVaX8owNhgzkEDyoHTGVEGHVJT1E9pfH',
+      price: 1,
+      config: [Object],
+      burnPercent: 0,
+      tvl: 0,
+      volumeQuote: 0,
+      mintAmountA: 0,
+      mintAmountB: 0,
+      rewardDefaultInfos: [],
+      farmUpcomingCount: 0,
+      farmOngoingCount: 0,
+      farmFinishedCount: 0,
+      day: [Object],
+      week: [Object],
+      month: [Object],
+      pooltype: []
+    }
+  }
+}
+🆔 Pool ID: HQf46SYN49WBQdK5LeuKCq8tE2NmZJc1UFFcSo7PKiom
+simulate tx string: [
+  'AWNAzKRZ8pzbpHDTWq4sFsFaexnW9OXMvOjkaOhCknY0FGo2NVUrHWUMIf6yN5vbit93y+X2b8zStzidgNAmGAGAAQAECjioBtbOELdXrHwsOLxcipkULdTIthf67wC14ZlUrEne88pgYQithQHUelmyZ+uQnyNHqtve0DGcRODPDfD1YkzIbn84m8LChhK4WZ8u26F3EPpXOAkIkRPB5cNY4C1dGpWX7yyMgJo3HR7InUQxfkuOloRvarDBAF9AApNYQtoO33WfmRsLR6HPEDe//I/6zrYx4gs+AzC+7eCYhnDdiRFZyJbC4nn5NXATjjg0W/wF2MfAttSKNrOVU15QYp8Yn7iYlzT8s4yRaNhTx1O2uKQ2EM3TJa+7xy/UFTbbzcJYqXikpoTBl5f2wBGaq2qzE9TTIwTzDdJJshrpb0YPIfNKJmygOh0GkE2c/YvUTlfz4GC3zxD6H5ionewBIuETFuNAGZk3J5bfnHOS9E4T1nyR+dPiNOPjnOBsvv0rNWrxLNxvL9gleXXIWFv5uaKlucBuIXJHPyOA8hCLsd5WFoUBBg0ABwEICQIDBAUKCgsMIOmS0Y7PaEC8AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAcTrsmxH1X0mdqMX8KwrApwkEJMpr5lIg+vhgWoCNV5OAAMVFBk='
+]
+
+❌ Error: {
+  InstructionError: [ 0, { Custom: 3007 } ],
+  txId: '2z6UssfYEnUSQQMFo4RB3smgrCpdooAxgsSjYB754d7QpuiU5ARv9sb3MZYYHu3VLMV3g8xgAnH32CCekhoh4Rwn'
+}
