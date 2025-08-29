@@ -1,0 +1,46 @@
+create market total 2 txs, market info:  {
+  marketId: '4xUSzwURhom91JmTdTz4YCbvVra8DzXAyfemeD8zDMSF',
+  requestQueue: '3WEzc59GLZT4nGAAZnSGAnNunY4Faun8prvzWAcNnc44',
+  eventQueue: 'F9cFXpDr3xokJVZfLgvFsEgK6gGhR48fARXwqvvKgfBZ',
+  bids: 'GoAEhcj2Q8eywKbtbXDYrtvNxEhZxMdF7wge7kTYcBht',
+  asks: 'BaANSxXQpAgtWmnduEwg5AJzeYGtPzKBpZd3sZi3Gdt8',
+  baseVault: 'FRDVr3EYhoqkkBJckmwEiw5LhPvoMybmGnW5dwY2RfD6',
+  quoteVault: '8xqhDcQyy1vaer6ogPTBC4SS8EeqmviSeAuEY2EGP7c2',
+  baseMint: '2KxZurGYneZ4FxhmdGn3q8wA2KaoJBvnsvhJTm37iE58',
+  quoteMint: '4NAcTFVvvQkVrqN2TpMjzE2452m7Lmt3u1HYERvk7huq'
+}
+simulate tx string: [
+  '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'
+]
+note: create market does not support token 2022, if you need more detail error info, set txVersion to TxVersion.LEGACY
+create market txIds: {
+  txIds: [
+    '4QaEEVXnE2wDtVx2XwtbbYRdGKKZvA2pZmR9A1SS8QantgvrB7543u1jCHVmxBvX1u3M65BumPyvDKMeegFVjkS5',
+    '3Rap8ZfE7PLtrPAeQ2rCR6Cq3csFYFeFQR4RzgvqUeek2CCr6DaCj2sdiv9Ke6xTtRSBfFQ4uQRVWNEhdD2saWEX'
+  ],
+  signedTxs: [
+    Transaction {
+      signatures: [Array],
+      feePayer: [PublicKey [PublicKey(4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM)]],
+      instructions: [Array],
+      recentBlockhash: '6vXPBJFv4ktEBfvqKL4e5HArwkhxyDnbNZBKyjqdmgL2',
+      lastValidBlockHeight: 392263888,
+      nonceInfo: undefined,
+      minNonceContextSlot: undefined,
+      _message: undefined,
+      _json: undefined
+    },
+    Transaction {
+      signatures: [Array],
+      feePayer: [PublicKey [PublicKey(4pASDWb7U11UVDbVaWQrYryYdGCaV3ydA9GXncTBe9NM)]],
+      instructions: [Array],
+      recentBlockhash: '6vXPBJFv4ktEBfvqKL4e5HArwkhxyDnbNZBKyjqdmgL2',
+      lastValidBlockHeight: 392263888,
+      nonceInfo: undefined,
+      minNonceContextSlot: undefined,
+      _message: undefined,
+      _json: undefined
+    }
+  ]
+}
