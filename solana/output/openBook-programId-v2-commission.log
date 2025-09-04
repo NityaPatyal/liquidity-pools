@@ -1,0 +1,48 @@
+create market total 2 txs, market info:  {
+  marketId: 'Sccxv8mqR4rgLriwfJcWYWBi5JZaqSEm7A8bBbpR8w6',
+  requestQueue: 'HsPkfLCzu4VbTmXS8eDeX36T21PV5kNzL6BiSeg8FPjf',
+  eventQueue: 'AE7h2oACZ9DAYX9yzR991sywL5Jx8MfdohAU67bQYRfd',
+  bids: '4qzmGpbxepzaJfaYJRjk2Qxutwd3afBgWrWqjeTKT3Ap',
+  asks: '8L5LRJ2yCDVJ1aS9GHWxKgbhv8bjSpZN6kjQqu7W6Ehf',
+  baseVault: 'CX4qtVGQ9yjDKTY9R5spePaddtHG7QfhJZso1rRBN1vb',
+  quoteVault: 'G9Cy13SZqmdHHeosDL66Gn9XD5dz4h7Qjdp3BJ4WcEcK',
+  baseMint: '2KxZurGYneZ4FxhmdGn3q8wA2KaoJBvnsvhJTm37iE58',
+  quoteMint: '4NAcTFVvvQkVrqN2TpMjzE2452m7Lmt3u1HYERvk7huq'
+}
+Unsupported event queue space: 262156 returning default to 2.8 SOL needed.
+🚀 ~ :122 ~ createMarket ~ sig: 4E5rYzEDDL2qefikhPvphN7pYoi4kkLobyCagcFqqCMQDwFDdX17gAxFMifjuU1vdjLeHXKtySGskKpFWpw29qzK
+simulate tx string: [
+  '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'
+]
+note: create market does not support token 2022, if you need more detail error info, set txVersion to TxVersion.LEGACY
+create market txIds: {
+  txIds: [
+    '2nWt37gTEYUZkMrMWMfGCcPGb6NzX5uNofYKvzSv4MywSDAQoAb7XcYa5prGt1hkoRxUiF6QGXA6pRyKkDu31Cnh',
+    '2nDJiUb5a6uD8xd4aVAqJNjUEGaZXkgKqnEfMxrTTdGiY34mHNXsZmVd5mXmjyVwQ1SxFnCb9DRy7eTWxi2qm4BL'
+  ],
+  signedTxs: [
+    Transaction {
+      signatures: [Array],
+      feePayer: [PublicKey [PublicKey(C7JAEABJkPDPdqw7b5hVuBpuqJ8WBf9uPabTfqLEgVib)]],
+      instructions: [Array],
+      recentBlockhash: 'WtF5SBYZfGuozBwJX4YrRCv36g7Xc5psZ9ujtYkxS5m',
+      lastValidBlockHeight: 393485423,
+      nonceInfo: undefined,
+      minNonceContextSlot: undefined,
+      _message: undefined,
+      _json: undefined
+    },
+    Transaction {
+      signatures: [Array],
+      feePayer: [PublicKey [PublicKey(C7JAEABJkPDPdqw7b5hVuBpuqJ8WBf9uPabTfqLEgVib)]],
+      instructions: [Array],
+      recentBlockhash: 'WtF5SBYZfGuozBwJX4YrRCv36g7Xc5psZ9ujtYkxS5m',
+      lastValidBlockHeight: 393485423,
+      nonceInfo: undefined,
+      minNonceContextSlot: undefined,
+      _message: undefined,
+      _json: undefined
+    }
+  ]
+}
